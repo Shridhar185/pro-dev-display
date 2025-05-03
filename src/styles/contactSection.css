@@ -8,6 +8,7 @@
 .contact-intro {
   font-size: var(--fz-lg);
   margin-bottom: 2rem;
+  color: var(--slate-light);
 }
 
 .contact-form {
@@ -30,6 +31,7 @@
 .form-group label {
   color: var(--slate-lightest);
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .form-group input,
@@ -47,6 +49,7 @@
 .form-group textarea:focus {
   border-color: var(--aqua);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
 }
 
 .form-group textarea {
@@ -59,12 +62,21 @@
   border: 1px solid var(--navy-lightest);
   border-radius: 8px;
   padding: 2rem;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
 
 .contact-info-card h3 {
   color: var(--slate-lightest);
   font-size: var(--fz-xl);
   margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--navy-lightest);
+  padding-bottom: 0.75rem;
 }
 
 .contact-method {
@@ -80,15 +92,24 @@
 
 .contact-detail p {
   color: var(--slate-lightest);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
 }
 
 .contact-detail a {
   color: var(--aqua);
+  transition: var(--transition);
+}
+
+.contact-detail a:hover {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .social-profiles h4 {
   color: var(--slate-lightest);
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .social-icons {
@@ -110,6 +131,14 @@
 
 .social-icons a:hover {
   color: var(--aqua);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -125,5 +154,9 @@
 @media (max-width: 480px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+  
+  .contact-info-card {
+    padding: 1.5rem;
   }
 }

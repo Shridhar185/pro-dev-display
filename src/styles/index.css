@@ -120,12 +120,6 @@ ul {
   font-weight: 600;
 }
 
-.numbered-heading span {
-  color: var(--aqua);
-  margin-right: 10px;
-  font-weight: normal;
-}
-
 .numbered-heading::after {
   content: "";
   display: block;

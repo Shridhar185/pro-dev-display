@@ -35,6 +35,12 @@
   color: var(--aqua);
   font-size: 1.8rem;
   font-weight: 700;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
 }
 
 .nav-links {
@@ -47,17 +53,22 @@
   gap: 2rem;
 }
 
+.nav-links li {
+  position: relative;
+}
+
 .nav-links a {
   color: var(--slate-light);
+  padding: 10px 0;
+  transition: var(--transition);
 }
 
 .nav-links a:hover {
   color: var(--aqua);
 }
 
-.nav-links span {
-  color: var(--aqua);
-  margin-right: 0.5rem;
+.btn-outline {
+  margin-left: 1.5rem;
 }
 
 .mobile-menu-btn {
@@ -104,13 +115,12 @@
   text-align: center;
   color: var(--slate-lightest);
   font-size: var(--fz-lg);
+  transition: var(--transition);
 }
 
-.mobile-menu span {
-  display: block;
+.mobile-menu a:hover {
   color: var(--aqua);
-  font-size: var(--fz-sm);
-  margin-bottom: 5px;
+  transform: translateX(5px);
 }
 
 .mobile-menu.open {

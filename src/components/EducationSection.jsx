@@ -29,9 +29,7 @@ const EducationSection = () => {
 
   return (
     <section id="education" className="section-padding education-section">
-      <h2 className="numbered-heading">
-        <span>02.</span> Education
-      </h2>
+      <h2 className="numbered-heading">Education</h2>
       <div className="education-timeline">
         {educations.map((edu, index) => (
           <div key={index} className="education-item">

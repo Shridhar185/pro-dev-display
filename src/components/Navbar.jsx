@@ -33,11 +33,11 @@ const Navbar = () => {
           
           <div className="nav-links">
             <ol>
-              <li><a href="#about"><span>01.</span> About</a></li>
-              <li><a href="#education"><span>02.</span> Education</a></li>
-              <li><a href="#projects"><span>03.</span> Projects</a></li>
-              <li><a href="#skills"><span>04.</span> Skills</a></li>
-              <li><a href="#contact"><span>05.</span> Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ol>
             <a href="/resume.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
               Resume
@@ -58,11 +58,11 @@ const Navbar = () => {
           
           <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
             <ol>
-              <li><a href="#about" onClick={closeMenu}><span>01.</span>About</a></li>
-              <li><a href="#education" onClick={closeMenu}><span>02.</span>Education</a></li>
-              <li><a href="#projects" onClick={closeMenu}><span>03.</span>Projects</a></li>
-              <li><a href="#skills" onClick={closeMenu}><span>04.</span>Skills</a></li>
-              <li><a href="#contact" onClick={closeMenu}><span>05.</span>Contact</a></li>
+              <li><a href="#about" onClick={closeMenu}>About</a></li>
+              <li><a href="#education" onClick={closeMenu}>Education</a></li>
+              <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+              <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+              <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
             </ol>
             <a href="/resume.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
               Resume

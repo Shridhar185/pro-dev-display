@@ -1,9 +1,10 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/skillsSection.css";
 
 const SkillBar = ({ name, level }) => {
   const [animated, setAnimated] = useState(false);
+  const skillRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,20 +19,19 @@ const SkillBar = ({ name, level }) => {
       { threshold: 0.5 }
     );
 
-    const element = document.getElementById(`skill-${name.replace(/\s+/g, '-')}`);
-    if (element) {
-      observer.observe(element);
+    if (skillRef.current) {
+      observer.observe(skillRef.current);
     }
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
+      if (skillRef.current) {
+        observer.unobserve(skillRef.current);
       }
     };
   }, [name]);
 
   return (
-    <div className="skill-bar" id={`skill-${name.replace(/\s+/g, '-')}`}>
+    <div className="skill-bar" ref={skillRef}>
       <div className="skill-header">
         <span className="skill-name">{name}</span>
         <span className="skill-percent">{level}%</span>
@@ -86,9 +86,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="section-padding skills-section">
-      <h2 className="numbered-heading">
-        <span>04.</span> Skills & Technologies
-      </h2>
+      <h2 className="numbered-heading">Skills & Technologies</h2>
       
       <div className="skills-tabs">
         <div className="tabs-list">
