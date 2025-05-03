@@ -1,0 +1,129 @@
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+}
+
+.contact-intro {
+  font-size: var(--fz-lg);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--slate-lightest);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--navy-light);
+  border: 1px solid var(--navy-lightest);
+  border-radius: 4px;
+  padding: 0.75rem;
+  color: var(--slate-lightest);
+  font-family: var(--font-sans);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--aqua);
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-info-card {
+  background-color: var(--navy-light);
+  border: 1px solid var(--navy-lightest);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.contact-info-card h3 {
+  color: var(--slate-lightest);
+  font-size: var(--fz-xl);
+  margin-bottom: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  color: var(--aqua);
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.contact-detail p {
+  color: var(--slate-lightest);
+}
+
+.contact-detail a {
+  color: var(--aqua);
+}
+
+.social-profiles h4 {
+  color: var(--slate-lightest);
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--navy);
+  border-radius: 50%;
+  color: var(--slate-light);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--aqua);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

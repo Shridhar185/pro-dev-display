@@ -1,0 +1,125 @@
+
+.skills-tabs {
+  margin-bottom: 2rem;
+}
+
+.tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--navy-lightest);
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: var(--slate-light);
+  font-size: var(--fz-md);
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  color: var(--aqua);
+}
+
+.tab-button.active {
+  color: var(--aqua);
+  border-bottom: 2px solid var(--aqua);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-bar {
+  margin-bottom: 1.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  color: var(--slate-lightest);
+}
+
+.skill-percent {
+  color: var(--aqua);
+}
+
+.skill-bar-bg {
+  height: 8px;
+  background-color: var(--navy-lightest);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background-color: var(--aqua);
+  border-radius: 999px;
+  transition: width 1s ease-out;
+}
+
+.other-tech {
+  margin-top: 4rem;
+}
+
+.other-tech h3 {
+  color: var(--slate-lightest);
+  font-size: var(--fz-xl);
+  margin-bottom: 1.5rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: var(--navy-light);
+  border: 1px solid var(--navy-lightest);
+  color: var(--slate);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: var(--fz-sm);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs-list {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    min-width: 33%;
+  }
+}

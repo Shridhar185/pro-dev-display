@@ -1,0 +1,120 @@
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--navy-light);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--navy-lightest);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.project-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 255, 218, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image::after {
+  opacity: 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.featured-label {
+  display: block;
+  color: var(--aqua);
+  font-size: var(--fz-xs);
+  margin-bottom: 0.5rem;
+}
+
+.project-content h3 {
+  color: var(--slate-lightest);
+  font-size: var(--fz-xl);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  margin-bottom: 1rem;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech-list li {
+  font-size: var(--fz-xxs);
+  color: var(--slate-light);
+  background-color: var(--navy-lightest);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: var(--slate-lightest);
+  transition: var(--transition);
+}
+
+.project-links a:hover {
+  color: var(--aqua);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image {
+    height: 180px;
+  }
+}

@@ -1,0 +1,29 @@
+
+.footer {
+  padding: 2rem;
+  border-top: 1px solid var(--navy-lightest);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-social-mobile {
+  display: none;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.copyright {
+  font-size: var(--fz-sm);
+  color: var(--slate);
+}
+
+@media (max-width: 768px) {
+  .footer-social-mobile {
+    display: flex;
+  }
+}
