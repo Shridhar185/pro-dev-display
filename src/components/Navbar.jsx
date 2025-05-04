@@ -32,7 +32,7 @@ const Navbar = () => {
           <a href="#" className="logo">JD.</a>
           
           <div className="nav-links">
-            <ol>
+            <ol className="nav-list">
               <li><a href="#about">About</a></li>
               <li><a href="#education">Education</a></li>
               <li><a href="#projects">Projects</a></li>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </button>
           
           <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-            <ol>
+            <ol className="mobile-nav-list">
               <li><a href="#about" onClick={closeMenu}>About</a></li>
               <li><a href="#education" onClick={closeMenu}>Education</a></li>
               <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
